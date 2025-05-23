@@ -17,9 +17,29 @@ namespace pryGimenez_IEFI
             InitializeComponent();
         }
 
+        ClsBasedatos basedatos = new ClsBasedatos();
+
         private void Inicio_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnAceptar_Click(object sender, EventArgs e)
+        {
+            string nombre = TxtUsuario.Text;
+            string contraaseña = TxtContraseña.Text;
+            basedatos.iniciarsesion(nombre, contraaseña);
+
+            if (basedatos.estado is null)
+            {
+                MessageBox.Show("nada");
+            }
+            else
+            {
+                Principal siguiente = new Principal();
+                siguiente.Show();
+            }
+        
         }
     }
 }

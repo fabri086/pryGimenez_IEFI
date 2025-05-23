@@ -10,21 +10,11 @@ using System.Windows.Forms;
 
 namespace pryGimenez_IEFI
 {
-    public partial class Principal : Form
+    public partial class Auditoria : Form
     {
-        public Principal()
+        public Auditoria()
         {
             InitializeComponent();
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
