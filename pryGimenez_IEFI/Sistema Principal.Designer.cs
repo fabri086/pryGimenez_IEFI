@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -37,6 +38,7 @@
             this.Statususuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.Statusfecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.Statushora = new System.Windows.Forms.ToolStripStatusLabel();
+            this.tiempo = new System.Windows.Forms.Timer(this.components);
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -109,6 +111,11 @@
             this.Statushora.Name = "Statushora";
             this.Statushora.Size = new System.Drawing.Size(33, 17);
             this.Statushora.Text = "Hora";
+            this.Statushora.Click += new System.EventHandler(this.Statushora_Click);
+            // 
+            // tiempo
+            // 
+            this.tiempo.Tick += new System.EventHandler(this.tiempo_Tick);
             // 
             // Principal
             // 
@@ -142,5 +149,6 @@
         private System.Windows.Forms.ToolStripStatusLabel Statususuario;
         private System.Windows.Forms.ToolStripStatusLabel Statusfecha;
         private System.Windows.Forms.ToolStripStatusLabel Statushora;
+        private System.Windows.Forms.Timer tiempo;
     }
 }
