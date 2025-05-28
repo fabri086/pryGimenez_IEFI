@@ -38,6 +38,7 @@ namespace pryGimenez_IEFI
             {
                 Principal siguiente = new Principal();
                 siguiente.Show();
+
                 
             }
             

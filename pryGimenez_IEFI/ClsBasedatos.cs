@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Data.OleDb; // Agregamos  System.Data.OleDb y System.Data
 using System.Data;
 using System.Security.Cryptography.X509Certificates;
+using System.Windows.Forms;
 
 namespace pryGimenez_IEFI
 {
@@ -82,11 +83,19 @@ namespace pryGimenez_IEFI
 
         }
         
-        public void Auditoria()
+        public void Auditoria(DataGridView Grilla)
         {
             rutabasedatos = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Registro.accdb";
+            comandoBD.Connection = coneccionBD;
+            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+            comandoBD.CommandText = "Auditoria";
+
 
         }
+
+
+
+
 
     }
 
