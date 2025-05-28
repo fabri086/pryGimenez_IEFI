@@ -41,5 +41,14 @@ namespace pryGimenez_IEFI
         {
 
         }
+
+        private void auditoriaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Auditoria next = new Auditoria();
+            next.Show();
+
+        }
+
     }
+
 }

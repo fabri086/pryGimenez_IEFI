@@ -81,7 +81,12 @@ namespace pryGimenez_IEFI
             }
 
         }
+        
+        public void Auditoria()
+        {
+            rutabasedatos = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Registro.accdb";
 
+        }
 
     }
 
