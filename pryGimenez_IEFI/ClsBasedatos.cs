@@ -89,7 +89,7 @@ namespace pryGimenez_IEFI
             {
                 string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Registro.accdb";
 
-                using (OleDbConnection conection = new OleDbConnection())
+                using (OleDbConnection conection = new OleDbConnection(cadenaConexion))
                 {
                     conection.Open();
                     OleDbCommand comand = new OleDbCommand("SELECT * FROM Auditoria", conection);
@@ -99,7 +99,8 @@ namespace pryGimenez_IEFI
 
 
                     DataTable tabla = new DataTable();
-                    adaptadorBD.Fill(tabla);
+
+                    adapter.Fill(tabla);
 
                     Grilla.DataSource = tabla;
 

@@ -30,15 +30,16 @@ namespace pryGimenez_IEFI
             string contraaseña = TxtContraseña.Text;
             basedatos.iniciarsesion(nombre, contraaseña);
 
-            if (basedatos.estado is null)
+            if (basedatos.estado == "Usuario correcto")
             {
-                MessageBox.Show("nada");
+                Principal siguiente = new Principal();
+                this.Hide();
+                siguiente.Show();
+                
             }
             else
             {
-                Principal siguiente = new Principal();
-                siguiente.Show();
-
+                MessageBox.Show("Usuario no identificado");
                 
             }
             

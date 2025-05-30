@@ -22,5 +22,10 @@ namespace pryGimenez_IEFI
         {
             cadena.Auditoria(DgvGrilla);
         }
+
+        private void Auditoria_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

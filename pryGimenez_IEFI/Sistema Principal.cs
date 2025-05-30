@@ -30,10 +30,7 @@ namespace pryGimenez_IEFI
 
         private void tiempo_Tick(object sender, EventArgs e)
         {
-            int contador = 0;
-            contador++;
-            tiempo.Enabled = true;
-            Statushora.Text =contador.ToString();
+            
             
         }
 
@@ -46,9 +43,19 @@ namespace pryGimenez_IEFI
         {
             Auditoria next = new Auditoria();
             next.Show();
+            this.Hide();
 
         }
 
+        private void Principal_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            
+        }
+
+        private void Principal_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }
