@@ -85,11 +85,38 @@ namespace pryGimenez_IEFI
         
         public void Auditoria(DataGridView Grilla)
         {
+            try
+            {
+                string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Registro.accdb";
+
+                using (OleDbConnection conection = new OleDbConnection())
+                {
+                    conection.Open();
+                    OleDbCommand comand = new OleDbCommand("SELECT * FROM Auditoria", conection);
+
+
+                    OleDbDataAdapter adapter = new OleDbDataAdapter(comand);
+
+
+                    DataTable tabla = new DataTable();
+                    adaptadorBD.Fill(tabla);
+
+                    Grilla.DataSource = tabla;
+
+                    estado = "Auditoría cargada correctamente";
+                }
+            }
+            catch (Exception error)
+            {
+                estado = "Error al cargar auditoría: " + error.Message;
+                MessageBox.Show(estado);
+            }
+            /*
             rutabasedatos = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Registro.accdb";
             comandoBD.Connection = coneccionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
             comandoBD.CommandText = "Auditoria";
-
+            */
 
         }
 

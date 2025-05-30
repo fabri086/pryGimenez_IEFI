@@ -17,7 +17,8 @@ namespace pryGimenez_IEFI
             InitializeComponent();
         }
         ClsBasedatos cadena = new ClsBasedatos();
-        private void DgvGrilla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+       
+        private void Auditoria_Load(object sender, EventArgs e)
         {
             cadena.Auditoria(DgvGrilla);
         }

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auditoria));
             this.DgvGrilla = new System.Windows.Forms.DataGridView();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).BeginInit();
             this.SuspendLayout();
@@ -39,7 +40,7 @@
             this.DgvGrilla.Name = "DgvGrilla";
             this.DgvGrilla.Size = new System.Drawing.Size(475, 347);
             this.DgvGrilla.TabIndex = 0;
-            this.DgvGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrilla_CellContentClick);
+           
             // 
             // Auditoria
             // 
@@ -47,9 +48,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.DgvGrilla);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Auditoria";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Auditoria";
+            this.Load += new System.EventHandler(this.Auditoria_Load);
             ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).EndInit();
             this.ResumeLayout(false);
 
