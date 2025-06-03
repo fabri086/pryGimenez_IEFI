@@ -56,6 +56,14 @@ namespace pryGimenez_IEFI
         {
             Application.Exit();
         }
+
+        private void cerraSesionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Inicio salir = new Inicio();
+            salir.Show();
+            this.Hide();
+            MessageBox.Show("Cerrar Sesion con exito");
+        }
     }
 
 }

@@ -27,5 +27,13 @@ namespace pryGimenez_IEFI
         {
             Application.Exit();
         }
+
+        private void BtnVolver_Click(object sender, EventArgs e)
+        {
+            Principal back = new Principal();
+            back.Show();
+            back.Hide();
+
+        }
     }
 }

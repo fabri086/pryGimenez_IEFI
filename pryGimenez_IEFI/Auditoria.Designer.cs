@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auditoria));
             this.DgvGrilla = new System.Windows.Forms.DataGridView();
+            this.BtnVolver = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,11 +42,22 @@
             this.DgvGrilla.Size = new System.Drawing.Size(569, 347);
             this.DgvGrilla.TabIndex = 0;
             // 
+            // BtnVolver
+            // 
+            this.BtnVolver.Location = new System.Drawing.Point(695, 71);
+            this.BtnVolver.Name = "BtnVolver";
+            this.BtnVolver.Size = new System.Drawing.Size(122, 44);
+            this.BtnVolver.TabIndex = 1;
+            this.BtnVolver.Text = "Volver";
+            this.BtnVolver.UseVisualStyleBackColor = true;
+            this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
+            // 
             // Auditoria
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(729, 430);
+            this.ClientSize = new System.Drawing.Size(917, 430);
+            this.Controls.Add(this.BtnVolver);
             this.Controls.Add(this.DgvGrilla);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Auditoria";
@@ -61,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView DgvGrilla;
+        private System.Windows.Forms.Button BtnVolver;
     }
 }
