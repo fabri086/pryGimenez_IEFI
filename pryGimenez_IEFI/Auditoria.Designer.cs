@@ -38,7 +38,7 @@
             // 
             this.DgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvGrilla.Enabled = false;
-            this.DgvGrilla.Location = new System.Drawing.Point(49, 28);
+            this.DgvGrilla.Location = new System.Drawing.Point(27, 25);
             this.DgvGrilla.Name = "DgvGrilla";
             this.DgvGrilla.Size = new System.Drawing.Size(544, 284);
             this.DgvGrilla.TabIndex = 0;
@@ -46,7 +46,7 @@
             // 
             // BtnVolver
             // 
-            this.BtnVolver.Location = new System.Drawing.Point(635, 43);
+            this.BtnVolver.Location = new System.Drawing.Point(599, 25);
             this.BtnVolver.Name = "BtnVolver";
             this.BtnVolver.Size = new System.Drawing.Size(122, 44);
             this.BtnVolver.TabIndex = 1;
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 350);
+            this.ClientSize = new System.Drawing.Size(759, 350);
             this.Controls.Add(this.BtnVolver);
             this.Controls.Add(this.DgvGrilla);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
