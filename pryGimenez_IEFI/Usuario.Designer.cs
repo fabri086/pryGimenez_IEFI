@@ -1,6 +1,6 @@
 ﻿namespace pryGimenez_IEFI
 {
-    partial class Auditoria
+    partial class Usuario
     {
         /// <summary>
         /// Required designer variable.
@@ -28,53 +28,51 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Auditoria));
-            this.DgvGrilla = new System.Windows.Forms.DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Usuario));
+            this.DgvUsuario = new System.Windows.Forms.DataGridView();
             this.BtnVolver = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
-            // DgvGrilla
+            // DgvUsuario
             // 
-            this.DgvGrilla.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvGrilla.Enabled = false;
-            this.DgvGrilla.Location = new System.Drawing.Point(49, 28);
-            this.DgvGrilla.Name = "DgvGrilla";
-            this.DgvGrilla.Size = new System.Drawing.Size(544, 284);
-            this.DgvGrilla.TabIndex = 0;
-            this.DgvGrilla.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvGrilla_CellContentClick);
+            this.DgvUsuario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvUsuario.Enabled = false;
+            this.DgvUsuario.Location = new System.Drawing.Point(126, 45);
+            this.DgvUsuario.Name = "DgvUsuario";
+            this.DgvUsuario.Size = new System.Drawing.Size(460, 214);
+            this.DgvUsuario.TabIndex = 0;
             // 
             // BtnVolver
             // 
-            this.BtnVolver.Location = new System.Drawing.Point(635, 43);
+            this.BtnVolver.Location = new System.Drawing.Point(626, 64);
             this.BtnVolver.Name = "BtnVolver";
-            this.BtnVolver.Size = new System.Drawing.Size(122, 44);
+            this.BtnVolver.Size = new System.Drawing.Size(96, 42);
             this.BtnVolver.TabIndex = 1;
             this.BtnVolver.Text = "Regresar";
             this.BtnVolver.UseVisualStyleBackColor = true;
             this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
-            // Auditoria
+            // Usuario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(863, 350);
+            this.ClientSize = new System.Drawing.Size(790, 321);
             this.Controls.Add(this.BtnVolver);
-            this.Controls.Add(this.DgvGrilla);
+            this.Controls.Add(this.DgvUsuario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Name = "Auditoria";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Auditoria";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Auditoria_FormClosed);
-            this.Load += new System.EventHandler(this.Auditoria_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DgvGrilla)).EndInit();
+            this.Name = "Usuario";
+            this.Text = "Usuario";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Usuario_FormClosed);
+            this.Load += new System.EventHandler(this.Usuario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.DgvUsuario)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView DgvGrilla;
+        private System.Windows.Forms.DataGridView DgvUsuario;
         private System.Windows.Forms.Button BtnVolver;
     }
 }

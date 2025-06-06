@@ -31,15 +31,15 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.cerraSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tareasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.administradorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.auditoriaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.Statususuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.Usuario = new System.Windows.Forms.ToolStripStatusLabel();
+            this.fecha = new System.Windows.Forms.ToolStripStatusLabel();
             this.tiempo = new System.Windows.Forms.Timer(this.components);
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.cerraSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,10 +56,17 @@
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // cerraSesionToolStripMenuItem
+            // 
+            this.cerraSesionToolStripMenuItem.Name = "cerraSesionToolStripMenuItem";
+            this.cerraSesionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
+            this.cerraSesionToolStripMenuItem.Text = "Cerrar sesion";
+            this.cerraSesionToolStripMenuItem.Click += new System.EventHandler(this.cerraSesionToolStripMenuItem_Click);
+            // 
             // tareasToolStripMenuItem
             // 
             this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
-            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.tareasToolStripMenuItem.Text = "Tareas";
             // 
             // administradorToolStripMenuItem
@@ -76,6 +83,7 @@
             this.usuarioToolStripMenuItem.Name = "usuarioToolStripMenuItem";
             this.usuarioToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.usuarioToolStripMenuItem.Text = "Usuario";
+            this.usuarioToolStripMenuItem.Click += new System.EventHandler(this.usuarioToolStripMenuItem_Click);
             // 
             // auditoriaToolStripMenuItem
             // 
@@ -87,38 +95,31 @@
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Statususuario});
+            this.Usuario,
+            this.fecha});
             this.statusStrip1.Location = new System.Drawing.Point(0, 348);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(834, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // Statususuario
+            // Usuario
             // 
-            this.Statususuario.Name = "Statususuario";
-            this.Statususuario.Size = new System.Drawing.Size(46, 17);
-            this.Statususuario.Text = "usuario";
-            this.Statususuario.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            this.Usuario.Name = "Usuario";
+            this.Usuario.Size = new System.Drawing.Size(46, 17);
+            this.Usuario.Text = "usuario";
+            this.Usuario.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+            // 
+            // fecha
+            // 
+            this.fecha.Name = "fecha";
+            this.fecha.Size = new System.Drawing.Size(36, 17);
+            this.fecha.Text = "fecha";
             // 
             // tiempo
             // 
+            this.tiempo.Enabled = true;
             this.tiempo.Tick += new System.EventHandler(this.tiempo_Tick);
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Enabled = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(610, 350);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 2;
-            // 
-            // cerraSesionToolStripMenuItem
-            // 
-            this.cerraSesionToolStripMenuItem.Name = "cerraSesionToolStripMenuItem";
-            this.cerraSesionToolStripMenuItem.Size = new System.Drawing.Size(87, 20);
-            this.cerraSesionToolStripMenuItem.Text = "Cerrar sesion";
-            this.cerraSesionToolStripMenuItem.Click += new System.EventHandler(this.cerraSesionToolStripMenuItem_Click);
             // 
             // Principal
             // 
@@ -127,7 +128,6 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.ClientSize = new System.Drawing.Size(834, 370);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -155,9 +155,9 @@
         private System.Windows.Forms.ToolStripMenuItem usuarioToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem auditoriaToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;
-        private System.Windows.Forms.ToolStripStatusLabel Statususuario;
+        private System.Windows.Forms.ToolStripStatusLabel Usuario;
         private System.Windows.Forms.Timer tiempo;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.ToolStripMenuItem cerraSesionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripStatusLabel fecha;
     }
 }

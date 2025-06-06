@@ -20,7 +20,14 @@ namespace pryGimenez_IEFI
        
         private void Auditoria_Load(object sender, EventArgs e)
         {
+            DgvGrilla.Columns.Add("colusuario", "usuario");
+            DgvGrilla.Columns.Add("colfechahora", "fecha y hora");
+            DgvGrilla.Columns.Add("colaccion", "accion");
+
+            
+            /*ClsBasedatos cadena = new ClsBasedatos();
             cadena.Auditoria(DgvGrilla);
+            //cadena.Auditoria(DgvGrilla);*/
         }
 
         private void Auditoria_FormClosed(object sender, FormClosedEventArgs e)
@@ -30,9 +37,14 @@ namespace pryGimenez_IEFI
 
         private void BtnVolver_Click(object sender, EventArgs e)
         {
-            Principal back = new Principal();
+           Principal back = new Principal();
             back.Show();
-            back.Hide();
+            this.Hide();
+           
+        }
+
+        private void DgvGrilla_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

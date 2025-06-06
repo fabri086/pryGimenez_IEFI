@@ -22,6 +22,8 @@ namespace pryGimenez_IEFI
         string rutabasedatos;
         public string estado;
 
+        public string rol;
+
         public void Usuario()
         {
             try
@@ -50,7 +52,7 @@ namespace pryGimenez_IEFI
 
         }
         
-        public void iniciarsesion(string nombreUser, string passUser)
+        public void iniciarsesion(string nombreUser, string passUser)// para poder ingresar en el form
         {
             try
             {
@@ -83,45 +85,56 @@ namespace pryGimenez_IEFI
 
         }
         
-        public void Auditoria(DataGridView Grilla)
+        public void Auditoria(DataGridView grilla)
         {
             try
             {
-                string cadenaConexion = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Registro.accdb";
+                string Usuario = Environment.UserName;
+                string FechaHora = DateTime.Now.ToString("g");
+                string accion = "Ingreso al sistema";
 
-                using (OleDbConnection conection = new OleDbConnection(cadenaConexion))
+                grilla.Rows.Add(Usuario, FechaHora, accion);
+           
+            }  
+            catch (Exception error)
+            {
+                estado = error.Message;
+            }
+
+        }
+        
+        public void GrillaUsuario(DataGridView grilla2)
+        {
+            try
+            {
+                string ConnectionChain = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Registro.accdb";
+
+                using (OleDbConnection connection = new OleDbConnection(ConnectionChain))
                 {
-                    conection.Open();
-                    OleDbCommand comand = new OleDbCommand("SELECT * FROM Auditoria", conection);
-
+                    connection.Open();
+                    OleDbCommand comand = new OleDbCommand("SELECT * FROM Usuarios", connection);
 
                     OleDbDataAdapter adapter = new OleDbDataAdapter(comand);
-
 
                     DataTable tabla = new DataTable();
 
                     adapter.Fill(tabla);
 
-                    Grilla.DataSource = tabla;
+                    grilla2.DataSource = tabla;
 
-                    estado = "Auditoría cargada correctamente";
+                    estado = "Usuario cargado completo";
+
                 }
+
             }
             catch (Exception error)
             {
-                estado = "Error al cargar auditoría: " + error.Message;
+                estado = "Error al mostrar " + error.Message;
                 MessageBox.Show(estado);
             }
-            /*
-            rutabasedatos = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source= Registro.accdb";
-            comandoBD.Connection = coneccionBD;
-            comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "Auditoria";
-            */
+
 
         }
-
-
 
 
 

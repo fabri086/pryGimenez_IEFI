@@ -32,8 +32,15 @@ namespace pryGimenez_IEFI
 
             if (basedatos.estado == "Usuario correcto")
             {
-                Principal siguiente = new Principal();
+                string rol = basedatos.rol;
+
+
+
                 this.Hide();
+                Principal siguiente = new Principal();
+
+                siguiente.usuario = TxtUsuario.Text;
+
                 siguiente.Show();
                 
             }
@@ -45,6 +52,10 @@ namespace pryGimenez_IEFI
             
         }
 
+        private void Inicio_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
     }
 
 }
