@@ -13,12 +13,11 @@ namespace pryGimenez_IEFI
 {
     public partial class Principal : Form
     {
-
         public string usuario = "";
+
         public Principal()
         {
             InitializeComponent();
-           
 
         }
 
@@ -26,12 +25,6 @@ namespace pryGimenez_IEFI
         {
             Usuario.Text = this.usuario;
             fecha.Text = DateTime.Now.ToString("dd/mm/yy hh:mm:ss");
-        }
-
-
-        private void toolStripStatusLabel1_Click(object sender, EventArgs e)
-        {
-           
         }
         
 

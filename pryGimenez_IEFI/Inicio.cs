@@ -34,7 +34,7 @@ namespace pryGimenez_IEFI
             {
                 string rol = basedatos.rol;
 
-
+                //basedatos.Registrodesesion(nombre,"admin");
 
                 this.Hide();
                 Principal siguiente = new Principal();

@@ -24,10 +24,8 @@ namespace pryGimenez_IEFI
             DgvGrilla.Columns.Add("colfechahora", "fecha y hora");
             DgvGrilla.Columns.Add("colaccion", "accion");
 
-            
-            /*ClsBasedatos cadena = new ClsBasedatos();
             cadena.Auditoria(DgvGrilla);
-            //cadena.Auditoria(DgvGrilla);*/
+            
         }
 
         private void Auditoria_FormClosed(object sender, FormClosedEventArgs e)

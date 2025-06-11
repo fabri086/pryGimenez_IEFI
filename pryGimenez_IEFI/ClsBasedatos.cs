@@ -39,16 +39,20 @@ namespace pryGimenez_IEFI
             }
            
         }
-        public void Registrodesesion()
+        public void Registrodesesion(string User, string rol)
         {
             comandoBD = new OleDbCommand();
 
             comandoBD.Connection = coneccionBD;
             comandoBD.CommandType = System.Data.CommandType.TableDirect;
-            comandoBD.CommandText = "logs";
+            comandoBD.CommandText = "Auditoria";
+
+            User = User.ToString();
+            rol = rol.ToString();
 
             adaptadorBD = new OleDbDataAdapter();
-            adaptadorBD.Fill(obj, "logs");
+            adaptadorBD.Fill(obj, "Auditoria");
+
 
         }
         
@@ -74,9 +78,26 @@ namespace pryGimenez_IEFI
                         if(corriendoBD[1].ToString() == nombreUser && corriendoBD[2].ToString() == passUser)
                         {
                             estado = "Usuario correcto";
+                            string Nombre = Environment.UserName;
+                            string horaingresada = DateTime.Now.ToString();
+
+                            //agrgado ahora 11/06/
+                            /*
+                            coneccionBD = new OleDbConnection(rutabasedatos);
+                            coneccionBD.Open();
+                            comandoBD = new OleDbCommand();
+
+                            comandoBD.Connection = coneccionBD;
+                            comandoBD.CommandType = System.Data.CommandType.TableDirect;
+                            comandoBD.CommandText = "Auditoria";
+                            */
+
                         }
+
                     }
+
                 }
+
             }
             catch(Exception error)
             {
@@ -91,9 +112,9 @@ namespace pryGimenez_IEFI
             {
                 string Usuario = Environment.UserName;
                 string FechaHora = DateTime.Now.ToString("g");
-                string accion = "Ingreso al sistema";
+                string Rol = "";
 
-                grilla.Rows.Add(Usuario, FechaHora, accion);
+                grilla.Rows.Add(Usuario, FechaHora, Rol);
            
             }  
             catch (Exception error)

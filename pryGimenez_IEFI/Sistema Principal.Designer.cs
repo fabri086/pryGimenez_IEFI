@@ -52,7 +52,7 @@
             this.administradorToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(834, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(866, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -97,9 +97,9 @@
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.Usuario,
             this.fecha});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 472);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 311);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(834, 22);
+            this.statusStrip1.Size = new System.Drawing.Size(866, 22);
             this.statusStrip1.TabIndex = 1;
             this.statusStrip1.Text = "statusStrip1";
             // 
@@ -108,7 +108,7 @@
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(46, 17);
             this.Usuario.Text = "usuario";
-            this.Usuario.Click += new System.EventHandler(this.toolStripStatusLabel1_Click);
+           
             // 
             // fecha
             // 
@@ -127,7 +127,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(834, 494);
+            this.ClientSize = new System.Drawing.Size(866, 333);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
