@@ -66,7 +66,7 @@
             // tareasToolStripMenuItem
             // 
             this.tareasToolStripMenuItem.Name = "tareasToolStripMenuItem";
-            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.tareasToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
             this.tareasToolStripMenuItem.Text = "Tareas";
             // 
             // administradorToolStripMenuItem
@@ -108,7 +108,6 @@
             this.Usuario.Name = "Usuario";
             this.Usuario.Size = new System.Drawing.Size(46, 17);
             this.Usuario.Text = "usuario";
-           
             // 
             // fecha
             // 
