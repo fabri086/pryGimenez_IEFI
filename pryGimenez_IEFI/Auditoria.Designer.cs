@@ -46,12 +46,15 @@
             // 
             // BtnVolver
             // 
+            this.BtnVolver.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.BtnVolver.Cursor = System.Windows.Forms.Cursors.Default;
+            this.BtnVolver.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.BtnVolver.Location = new System.Drawing.Point(599, 25);
             this.BtnVolver.Name = "BtnVolver";
             this.BtnVolver.Size = new System.Drawing.Size(122, 44);
             this.BtnVolver.TabIndex = 1;
             this.BtnVolver.Text = "Regresar";
-            this.BtnVolver.UseVisualStyleBackColor = true;
+            this.BtnVolver.UseVisualStyleBackColor = false;
             this.BtnVolver.Click += new System.EventHandler(this.BtnVolver_Click);
             // 
             // Auditoria
